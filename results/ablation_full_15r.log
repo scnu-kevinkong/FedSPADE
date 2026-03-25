@@ -1,0 +1,5 @@
+Initialized FedUG V2 Server with 100 clients
+Training FedUgV2 with model cifaredl on cifar10 for 100 clients.
+Hyperparameters: LR=0.005, WD=0.0005, Local Epochs=5, Global Rounds=15
+No Byzantine attack configured.
+Method took (706.95) total seconds for all rounds.

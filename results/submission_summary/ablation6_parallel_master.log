@@ -1,0 +1,7 @@
+nohup: ignoring input
+[LAUNCH][GPU0] ablation6_wofsa_gc_200r
+[LAUNCH][GPU0] ablation6_wogc_afr_200r
+[LAUNCH][GPU0] ablation6_woafr_200r
+[LAUNCH][GPU1] ablation6_fsagc_200r
+[LAUNCH][GPU1] ablation6_gcafr_200r
+[LAUNCH][GPU1] ablation6_fedspade_200r

@@ -1,6 +1,7 @@
 from abc import ABC
 import numpy as np
 import torch
+import logging
 from copy import deepcopy
 
 class Server(ABC):
@@ -9,15 +10,33 @@ class Server(ABC):
         self.model = deepcopy(args.model)
         self.global_rounds = args.global_rounds
         self.clients = []
-        self.D = self.model.D
+        try:
+            self.D = self.model.D  # Try to get D from model
+        except AttributeError:
+            # If model doesn't have D attribute, set a default value or calculate it
+            if hasattr(self.model, 'feature_dim'):
+                self.D = self.model.feature_dim
+            else:
+                # Set a reasonable default based on your model architecture
+                self.D = 512  # Common feature dimension size
+                print(f"Warning: Model {args.model_name} has no 'D' attribute. Using default value {self.D}.")
         self.num_classes = args.num_classes
         self.device = args.device
         self.active_clients = []
+        self.num_active_clients = 0
         self.sampling_prob = args.sampling_prob
         self.active_client_ids = []
         self.eval_gap = args.eval_gap
         self.train_times = []
         self.round_times = []
+        logger_name = getattr(self, 'id', 'Server_DefaultID')
+        self.logger = logging.getLogger(str(logger_name))
+        if not self.logger.hasHandlers(): 
+            stream_handler = logging.StreamHandler()
+            formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+            stream_handler.setFormatter(formatter)
+            self.logger.addHandler(stream_handler)
+        self.logger.setLevel(getattr(logging, 'INFO', logging.INFO))
 
     def send_models(self):
         for c in self.active_clients:
@@ -29,9 +48,11 @@ class Server(ABC):
         sampling_prob_tensor = torch.ones(self.num_clients)*self.sampling_prob
         selected_indices = (torch.bernoulli(sampling_prob_tensor).numpy()).astype(int)
         selected_indices = np.where(selected_indices==1)[0]
-        for idx in np.unique(selected_indices):
+        self.selected_clients_indices = list(np.unique(selected_indices))
+        for idx in self.selected_clients_indices:
             self.active_clients.append(self.clients[idx])
             self.active_client_ids.append(idx)
+        self.num_active_clients = len(self.active_clients)
 
     def aggregate_models(self):
         total_samples = sum(c.num_train for c in self.active_clients)

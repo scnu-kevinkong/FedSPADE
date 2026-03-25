@@ -1,23 +1,17 @@
-# In client_fedavg.py
-
-from utils.util import AverageMeter
 import torch
+import torch.nn.functional as F
+import numpy as np
+from utils.util import AverageMeter
 from clients.client_base import Client
-from copy import deepcopy # Import deepcopy
 
 class ClientFedAvg(Client):
-    def __init__(self, args, client_idx):
-        super().__init__(args, client_idx)
-        # Initialize latest_params to None
-        self.latest_params = None
-
+    def __init__(self, args, client_idx, is_corrupted=False):
+        super().__init__(args, client_idx, is_corrupted)        
+        
     def train(self):
         trainloader = self.load_train_data()
-        # Make sure model is on the correct device before training
-        self.model = self.model.to(self.device)
-        # It's generally better to create the optimizer *after* moving the model
         optimizer = torch.optim.SGD(self.model.parameters(), lr=self.lr, momentum=self.momentum, weight_decay=self.wd)
-
+        self.model = self.model.to(self.device)
         self.model.train()
         losses = AverageMeter()
         accs = AverageMeter()
@@ -39,51 +33,60 @@ class ClientFedAvg(Client):
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
-
-        # <<< Modification Start >>>
-        # After training loop, before returning:
-        # 1. Ensure the model is moved to CPU
+                
         self.model = self.model.to("cpu")
-        # 2. Store the state dictionary (parameters) in self.latest_params
-        #    Using deepcopy ensures the server gets a distinct copy
-        self.latest_params = deepcopy(self.model.state_dict())
-        # <<< Modification End >>>
-
-        # Return metrics (as before)
         return accs.avg, losses.avg
 
-    def get_update(self, global_model):
+    def get_eval_output(self):
         """
-        Calculates the update vector (difference).
-        (Implementation from previous response is likely correct, ensure it includes traceback)
+        在测试(ID)和OOD数据上评估模型，以获取用于服务器端高级指标计算的输出。
         """
-        update = torch.tensor([], dtype=torch.float32, device="cpu")
         self.model.eval()
-        global_model.eval()
-        try:
+        self.model.to(self.device)
+
+        # --- In-Distribution (ID) 评估 ---
+        id_loader = self.load_test_data()
+        all_id_probs, all_id_labels, all_id_uncertainties = [], [], []
+
+        if id_loader and len(id_loader) > 0:
             with torch.no_grad():
-                local_params = self.model.state_dict()
-                global_params = global_model.state_dict()
-                for name, global_param in global_model.named_parameters():
-                    if not global_param.requires_grad: continue
-                    if name in local_params:
-                        local_param = local_params[name].to("cpu")
-                        global_param_cpu = global_param.detach().clone().to("cpu")
-                        delta = local_param - global_param_cpu
-                        if torch.isnan(delta).any() or torch.isinf(delta).any():
-                            # Use logging if available, otherwise print
-                            log_func = getattr(self, 'logger.warning', print)
-                            log_func(f"Warning: NaN/Inf detected in delta for param {name} in client {self.client_idx}. Appending zeros.")
-                            delta = torch.zeros_like(delta)
-                        update = torch.cat((update, delta.view(-1)))
-                    else:
-                        log_func = getattr(self, 'logger.warning', print)
-                        log_func(f"Warning: Parameter {name} not found in local model during get_update for client {self.client_idx}. Appending zeros.")
-                        update = torch.cat((update, torch.zeros(global_param.numel(), dtype=torch.float32, device="cpu")))
-        except Exception as e:
-            log_func = getattr(self, 'logger.error', print)
-            log_func(f"ERROR calculating update for client {self.client_idx}: {e}")
-            # Consider adding traceback print here if not using logger.exception
-            traceback.print_exc()
-            return torch.tensor([], dtype=torch.float32, device="cpu")
-        return update
+                for x, y in id_loader:
+                    x, y = x.to(self.device), y.to(self.device)
+                    output = self.model(x)
+                    probs = F.softmax(output, dim=1)
+                    
+                    # 基于最大softmax概率(MSP)的不确定性
+                    msp, _ = torch.max(probs, dim=1)
+                    uncertainty = 1 - msp
+
+                    all_id_probs.append(probs.cpu().numpy())
+                    all_id_labels.append(y.cpu().numpy())
+                    all_id_uncertainties.append(uncertainty.cpu().numpy())
+
+        # --- Out-of-Distribution (OOD) 评估 ---
+        ood_loader = self.load_ood_data()
+        all_ood_uncertainties = []
+
+        if ood_loader and len(ood_loader) > 0:
+            with torch.no_grad():
+                for x, y in ood_loader: # OOD标签不用于检测
+                    x = x.to(self.device)
+                    output = self.model(x)
+                    probs = F.softmax(output, dim=1)
+
+                    # 基于最大softmax概率(MSP)的不确定性
+                    msp, _ = torch.max(probs, dim=1)
+                    uncertainty = 1 - msp
+                    
+                    all_ood_uncertainties.append(uncertainty.cpu().numpy())
+
+        self.model.to("cpu")
+
+        # 聚合结果
+        results = {
+            'id_probs': np.concatenate(all_id_probs) if all_id_probs else np.array([]),
+            'id_labels': np.concatenate(all_id_labels) if all_id_labels else np.array([]),
+            'id_uncertainties': np.concatenate(all_id_uncertainties) if all_id_uncertainties else np.array([]),
+            'ood_uncertainties': np.concatenate(all_ood_uncertainties) if all_ood_uncertainties else np.array([])
+        }
+        return results

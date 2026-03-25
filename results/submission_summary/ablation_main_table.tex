@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\caption{Ablation of FedUg on CIFAR10 Dir(0.1), no attack.}
+\label{tab:ablation_main}
+\begin{tabular}{@{}lccc|ccccc|ccc@{}}
+\toprule
+Variant & GPR & OOD & AUG & Acc$\uparrow$ & ECE$\downarrow$ & Brier$\downarrow$ & AUROC$\uparrow$ & FPR@95TPR$\downarrow$ & Mean projected $\lambda_{min}^{+}$ & Client-wise condition number & Mean projected eigenspectrum \\
+\midrule
+GPR only & Y & N & N & 76.78 & 0.1156 & 0.3317 & 0.0173 & 0.9899 & 0.0000 & inf & 0.0000 \\
+OOD only & N & Y & N & 79.05 & 0.1170 & 0.3203 & 0.0019 & 1.0000 & 0.0000 & inf & 0.0000 \\
+AUG only & N & N & Y & 67.40 & 0.1602 & 0.4706 & 0.0104 & 0.9973 & 0.0000 & inf & 0.0000 \\
+GPR + OOD & Y & Y & N & 71.63 & 0.1279 & 0.4189 & 0.1060 & 0.9654 & 0.0000 & inf & 0.0000 \\
+GPR + AUG & Y & N & Y & 64.72 & 0.1435 & 0.4934 & 0.1227 & 0.9706 & 0.0000 & inf & 0.0000 \\
+OOD + AUG & N & Y & Y & 66.03 & 0.1491 & 0.4906 & 0.1054 & 0.9728 & 0.0000 & inf & 0.0000 \\
+FedUg Full & Y & Y & Y & 67.16 & 0.1536 & 0.4799 & 0.1183 & 0.9732 & 0.0000 & inf & 0.0000 \\
+\bottomrule
+\end{tabular}
+\end{table}

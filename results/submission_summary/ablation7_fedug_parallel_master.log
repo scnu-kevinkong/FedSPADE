@@ -1,0 +1,8 @@
+nohup: ignoring input
+[LAUNCH][GPU0] ablation7_gpr_only_200r
+[LAUNCH][GPU0] ablation7_ood_only_200r
+[LAUNCH][GPU0] ablation7_aug_only_200r
+[LAUNCH][GPU1] ablation7_gpr_ood_200r
+[LAUNCH][GPU1] ablation7_gpr_aug_200r
+[LAUNCH][GPU1] ablation7_ood_aug_200r
+[LAUNCH][GPU1] ablation7_fedug_full_200r

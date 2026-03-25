@@ -5,9 +5,13 @@ from data.utils.loader import get_augmented_partition, get_partition, get_digit5
 from torch.utils.data import DataLoader, Subset
 import torch
 import os
+import logging
+from pathlib import Path
+from data.utils.loader import load_mnist
 
 class Client(ABC):
-    def __init__(self, args, client_idx):
+    def __init__(self, args, client_idx, is_corrupted=False):
+        self.args = args
         self.D = args.model.D
         self.model = deepcopy(args.model)
         self.model_path = f"results/{args.exp_name}/client_{client_idx}.ckpt"
@@ -28,7 +32,16 @@ class Client(ABC):
         self.val_prop = 1 - args.train_prop
         self.setup_dataset(args) 
         self.label_distribution = list(self.get_label_distribution()[1].cpu().numpy())
-        # self.is_corrupted = is_corrupted
+        self.is_corrupted = is_corrupted
+        self.ood_num_test = 0
+        logger_name = f"Client_{client_idx}"
+        self.logger = logging.getLogger(logger_name)
+        if not self.logger.hasHandlers():
+            handler = logging.StreamHandler()
+            formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+            handler.setFormatter(formatter)
+            self.logger.addHandler(handler)
+            self.logger.setLevel(getattr(logging, "INFO", logging.INFO))
         
     def save_model(self):
         torch.save(self.model.state_dict(), self.model_path)
@@ -180,6 +193,91 @@ class Client(ABC):
             batch_size = min(self.batch_size, self.num_test)
         dataloader = DataLoader(self.testset, batch_size=batch_size, shuffle=False, drop_last=False)
         return dataloader
+
+    from copy import deepcopy
+
+    def load_ood_data(self, batch_size=None):
+        """
+        Loads the Out-of-Distribution (OOD) test dataset.
+        """
+        try:
+            # Create a deep copy of args to safely modify
+            ood_args = deepcopy(self.args)
+            
+            # Get OOD dataset name from args if available, otherwise use default
+            ood_dataset = self.args.ood_dataset
+            ood_args.dataset = ood_dataset
+            
+            # Handle different OOD datasets
+            if ood_dataset == 'svhn':
+                # Import SVHN dataset directly from torchvision
+                from torchvision.datasets import SVHN
+                from torchvision import transforms
+                
+                # Define transforms similar to CIFAR
+                transform = transforms.Compose([
+                    transforms.ToTensor(),
+                    transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+                ])
+                
+                # Load SVHN test set directly
+                data_path = os.path.join(os.environ.get('DATA_PATH', './data'), 'SVHN')
+                test_dataset = SVHN(root=data_path, split='test', transform=transform, download=True)
+                
+                # Limit the number of samples to avoid memory issues
+                max_samples = 10
+                indices = np.random.choice(len(test_dataset), min(max_samples, len(test_dataset)), replace=False)
+                from torch.utils.data import Subset
+                self.ood_testset = Subset(test_dataset, indices)
+                self.ood_num_test = len(self.ood_testset)
+                
+                if self.ood_num_test == 0:
+                    return None
+                
+                # Set batch size
+                if batch_size is None:
+                    batch_size = self.batch_size
+                
+                final_batch_size = min(batch_size, self.ood_num_test)
+                
+                dataloader = DataLoader(self.ood_testset, batch_size=final_batch_size, shuffle=False, drop_last=False)
+                return dataloader
+            elif ood_dataset == 'cifar100':
+                # Original code for other datasets like CIFAR-100
+                partition_path = f"data/partition/{ood_dataset}_c100_dir01_10/client_{self.client_idx}.npz"
+                if not os.path.exists(partition_path):
+                    self.logger.warning(f"OOD partition file not found: {partition_path}")
+                    return None
+                
+                # Load indices for OOD dataset
+                indices = np.load(partition_path)
+                
+                # Get the OOD partition
+                train_dataset, test_dataset = get_partition(ood_args, indices)
+                
+                # Process datasets
+                self.ood_trainset, self.ood_valset = self.partial_dataset(train_dataset)
+                self.ood_testset = test_dataset
+                self.ood_num_train = len(self.ood_trainset)
+                self.ood_num_test = len(self.ood_testset)
+                self.ood_num_val = len(self.ood_valset)
+                
+                if self.ood_num_test == 0:
+                    return None
+                
+                # Set batch size
+                if batch_size is None:
+                    batch_size = self.batch_size
+                
+                final_batch_size = min(batch_size, self.ood_num_test)
+                
+                dataloader = DataLoader(self.ood_testset, batch_size=final_batch_size, shuffle=False, drop_last=False)
+                return dataloader
+        except Exception as e:
+            self.logger.error(f"Error loading OOD data for client {self.client_idx}: {str(e)}")
+            import traceback
+            self.logger.error(traceback.format_exc())
+            return None
     
     def get_label_distribution(self, split="train"):
         if split == "train":

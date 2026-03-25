@@ -6,6 +6,7 @@ from sklearn.model_selection import StratifiedKFold
 from statsmodels.stats.correlation_tools import cov_nearest
 import torchmin
 from clients.client_base import Client
+import torch.nn.functional as F
 
 class ClientFedFDA(Client):
     def __init__(self, args, client_idx):
@@ -228,3 +229,70 @@ class ClientFedFDA(Client):
             intercepts = -0.5 * torch.diag(torch.matmul(means, coefs.T)) + torch.log(priors).to(self.device)
             self.model.fc.weight.data = coefs.detach()
             self.model.fc.bias.data = intercepts.detach()
+
+    def get_logits_labels_and_loss(self, split="test"):
+        """
+        获取指定数据集分割的logits、标签和损失。
+        此方法对于计算校准和OOD指标至关重要。
+        """
+        self.model = self.model.to(self.device)
+        self.model.eval()
+
+        if split == "test":
+            loader = self.load_test_data()
+        elif split == "train":
+            loader = self.load_train_data()
+        elif split == "ood":
+            # 假设基类中存在load_ood_data方法
+            if hasattr(self, 'load_ood_data'):
+                loader = self.load_ood_data()
+            else:
+                return torch.tensor([]), torch.tensor([]), 0
+        else:
+            raise ValueError(f"未知的分割: {split}")
+
+        if loader is None or len(loader.dataset) == 0:
+            return torch.tensor([]), torch.tensor([]), 0
+
+        all_logits = []
+        all_labels = []
+        total_loss = 0
+        total_samples = 0
+
+        with torch.no_grad():
+            for x, y in loader:
+                x, y = x.to(self.device), y.to(self.device)
+                
+                # 需要特征来使用个性化的lda_classify
+                feats, _ = self.model(x, return_feat=True)
+                
+                # 从个性化的LDA分类器头获取logits
+                logits = self.lda_classify(feats, self.adaptive_means, self.adaptive_covariance)
+
+                # 计算损失
+                loss = self.loss(logits, y)
+                
+                all_logits.append(logits.cpu())
+                all_labels.append(y.cpu())
+                total_loss += loss.item() * x.size(0)
+                total_samples += x.size(0)
+
+        self.model = self.model.to("cpu")
+        
+        if not all_logits:
+            return torch.tensor([]), torch.tensor([]), 0
+
+        avg_loss = total_loss / total_samples if total_samples > 0 else 0
+        return torch.cat(all_logits), torch.cat(all_labels), avg_loss
+    
+    def evaluate(self):
+        """
+        原始的评估方法，主要用于快速检查准确率和损失。
+        更详细的评估将由服务端使用get_logits_labels_and_loss进行。
+        """
+        logits, labels, loss = self.get_logits_labels_and_loss(split="test")
+        if logits.numel() == 0:
+            return 0.0, 0.0
+        
+        acc = (logits.argmax(1) == labels).float().mean() * 100.0
+        return acc.item(), loss
