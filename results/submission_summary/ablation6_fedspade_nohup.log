@@ -1,0 +1,549 @@
+nohup: ignoring input
+[RUN] ablation6_wofsa_gc_200r
+2026-03-17 15:25:38,182 - Server_DefaultID - INFO - Starting FedUG V2 Training Process
+2026-03-17 15:25:38,182 - Server_DefaultID - INFO - --- Global Round 1/200 ---
+2026-03-17 15:26:08,563 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2395 ms
+2026-03-17 15:26:08,563 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:26:08,566 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:26:08,567 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.17, Max=1.21, Mean=1.19
+2026-03-17 15:26:08,569 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:26:08,569 - Server_DefaultID - INFO - --- Global Round 2/200 ---
+2026-03-17 15:26:15,981 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1886 ms
+2026-03-17 15:26:15,981 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:26:15,993 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:26:15,994 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.16, Max=1.23, Mean=1.19
+2026-03-17 15:26:15,996 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:26:15,996 - Server_DefaultID - INFO - --- Global Round 3/200 ---
+2026-03-17 15:26:22,621 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1823 ms
+2026-03-17 15:26:22,621 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:26:22,641 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:26:22,642 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.15, Max=1.28, Mean=1.19
+2026-03-17 15:26:22,643 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:26:22,644 - Server_DefaultID - INFO - --- Global Round 4/200 ---
+2026-03-17 15:26:38,254 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1900 ms
+2026-03-17 15:26:38,255 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:26:38,279 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:26:38,279 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.31, Mean=1.19
+2026-03-17 15:26:38,281 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:26:38,281 - Server_DefaultID - INFO - --- Global Round 5/200 ---
+2026-03-17 15:26:43,623 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1888 ms
+2026-03-17 15:26:43,623 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:26:43,783 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:26:43,784 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.35, Mean=1.20
+2026-03-17 15:26:43,786 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:26:43,787 - Server_DefaultID - INFO - --- Evaluating models at round 5 with Advanced Uncertainty Metrics ---
+2026-03-17 15:28:21,908 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 23.30%, Std: 31.84, Min: 0.00, Max: 100.00
+2026-03-17 15:28:21,908 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0890, Std: 0.0031
+2026-03-17 15:28:21,908 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.2342, Std: 0.2367
+2026-03-17 15:28:21,908 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.0783, Std: 0.1721
+2026-03-17 15:28:21,908 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:28:21,911 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.4817
+2026-03-17 15:28:21,912 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8807
+2026-03-17 15:28:21,913 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.0755
+2026-03-17 15:28:21,915 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.4850
+2026-03-17 15:28:21,917 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.4894
+2026-03-17 15:28:22,125 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0005.npz
+2026-03-17 15:28:22,126 - Server_DefaultID - INFO - New best personalized accuracy: 23.30%
+2026-03-17 15:28:22,126 - Server_DefaultID - INFO - --- Global Round 6/200 ---
+2026-03-17 15:28:26,458 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1992 ms
+2026-03-17 15:28:26,458 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:28:26,464 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:28:26,465 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.34, Mean=1.19
+2026-03-17 15:28:26,466 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:28:26,467 - Server_DefaultID - INFO - --- Global Round 7/200 ---
+2026-03-17 15:28:40,105 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2111 ms
+2026-03-17 15:28:40,105 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:28:40,121 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:28:40,122 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.26, Mean=1.19
+2026-03-17 15:28:40,123 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:28:40,124 - Server_DefaultID - INFO - --- Global Round 8/200 ---
+2026-03-17 15:28:47,697 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2119 ms
+2026-03-17 15:28:47,697 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:28:47,707 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:28:47,707 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.29, Mean=1.19
+2026-03-17 15:28:47,709 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:28:47,710 - Server_DefaultID - INFO - --- Global Round 9/200 ---
+2026-03-17 15:28:54,537 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2125 ms
+2026-03-17 15:28:54,537 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:28:54,568 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:28:54,569 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.29, Mean=1.18
+2026-03-17 15:28:54,571 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:28:54,572 - Server_DefaultID - INFO - --- Global Round 10/200 ---
+2026-03-17 15:29:03,958 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2078 ms
+2026-03-17 15:29:03,958 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:29:04,001 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:29:04,002 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.23, Mean=1.17
+2026-03-17 15:29:04,005 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:29:04,006 - Server_DefaultID - INFO - --- Evaluating models at round 10 with Advanced Uncertainty Metrics ---
+2026-03-17 15:30:40,751 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 27.47%, Std: 34.27, Min: 0.00, Max: 100.00
+2026-03-17 15:30:40,752 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0881, Std: 0.0044
+2026-03-17 15:30:40,752 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.2607, Std: 0.2535
+2026-03-17 15:30:40,752 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.0462, Std: 0.1762
+2026-03-17 15:30:40,752 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:30:40,754 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.5282
+2026-03-17 15:30:40,755 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8886
+2026-03-17 15:30:40,756 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.0805
+2026-03-17 15:30:40,758 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.5279
+2026-03-17 15:30:40,760 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.5280
+2026-03-17 15:30:41,301 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0010.npz
+2026-03-17 15:30:41,303 - Server_DefaultID - INFO - New best personalized accuracy: 27.47%
+2026-03-17 15:30:41,303 - Server_DefaultID - INFO - --- Global Round 11/200 ---
+2026-03-17 15:30:46,169 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2196 ms
+2026-03-17 15:30:46,169 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:30:46,174 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:30:46,175 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.26, Mean=1.19
+2026-03-17 15:30:46,176 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:30:46,177 - Server_DefaultID - INFO - --- Global Round 12/200 ---
+2026-03-17 15:30:52,178 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1966 ms
+2026-03-17 15:30:52,179 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:30:52,182 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:30:52,183 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.35, Mean=1.19
+2026-03-17 15:30:52,184 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:30:52,185 - Server_DefaultID - INFO - --- Global Round 13/200 ---
+2026-03-17 15:31:02,751 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2134 ms
+2026-03-17 15:31:02,751 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:31:02,766 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:31:02,767 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.31, Mean=1.19
+2026-03-17 15:31:02,768 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:31:02,769 - Server_DefaultID - INFO - --- Global Round 14/200 ---
+2026-03-17 15:31:13,584 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2104 ms
+2026-03-17 15:31:13,585 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:31:13,601 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:31:13,602 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.28, Mean=1.19
+2026-03-17 15:31:13,603 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:31:13,604 - Server_DefaultID - INFO - --- Global Round 15/200 ---
+2026-03-17 15:31:22,604 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2160 ms
+2026-03-17 15:31:22,604 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:31:22,697 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:31:22,698 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.22, Mean=1.17
+2026-03-17 15:31:22,700 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:31:22,701 - Server_DefaultID - INFO - --- Evaluating models at round 15 with Advanced Uncertainty Metrics ---
+2026-03-17 15:33:01,153 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 35.43%, Std: 36.29, Min: 0.00, Max: 100.00
+2026-03-17 15:33:01,153 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0872, Std: 0.0052
+2026-03-17 15:33:01,153 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.3149, Std: 0.2714
+2026-03-17 15:33:01,153 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.0356, Std: 0.1730
+2026-03-17 15:33:01,153 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:33:01,156 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.5243
+2026-03-17 15:33:01,157 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8819
+2026-03-17 15:33:01,158 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.0795
+2026-03-17 15:33:01,160 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.5278
+2026-03-17 15:33:01,163 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.5290
+2026-03-17 15:33:01,388 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0015.npz
+2026-03-17 15:33:01,390 - Server_DefaultID - INFO - New best personalized accuracy: 35.43%
+2026-03-17 15:33:01,390 - Server_DefaultID - INFO - --- Global Round 16/200 ---
+2026-03-17 15:33:09,762 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2067 ms
+2026-03-17 15:33:09,762 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:33:09,772 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:33:09,773 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.25, Mean=1.18
+2026-03-17 15:33:09,774 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:33:09,775 - Server_DefaultID - INFO - --- Global Round 17/200 ---
+2026-03-17 15:33:25,119 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2130 ms
+2026-03-17 15:33:25,119 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:33:25,125 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:33:25,127 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.21, Mean=1.17
+2026-03-17 15:33:25,129 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:33:25,130 - Server_DefaultID - INFO - --- Global Round 18/200 ---
+2026-03-17 15:33:32,583 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2354 ms
+2026-03-17 15:33:32,584 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:33:32,594 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:33:32,594 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.29, Mean=1.19
+2026-03-17 15:33:32,596 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:33:32,597 - Server_DefaultID - INFO - --- Global Round 19/200 ---
+2026-03-17 15:33:39,887 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2245 ms
+2026-03-17 15:33:39,887 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:33:39,899 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:33:39,900 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.25, Mean=1.19
+2026-03-17 15:33:39,902 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:33:39,902 - Server_DefaultID - INFO - --- Global Round 20/200 ---
+2026-03-17 15:34:24,280 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2009 ms
+2026-03-17 15:34:24,280 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:34:24,306 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:34:24,307 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.10, Max=1.38, Mean=1.17
+2026-03-17 15:34:24,308 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:34:24,309 - Server_DefaultID - INFO - --- Evaluating models at round 20 with Advanced Uncertainty Metrics ---
+2026-03-17 15:36:02,826 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 41.49%, Std: 35.61, Min: 0.00, Max: 100.00
+2026-03-17 15:36:02,826 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0861, Std: 0.0061
+2026-03-17 15:36:02,826 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.3490, Std: 0.2687
+2026-03-17 15:36:02,826 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.0572, Std: 0.1818
+2026-03-17 15:36:02,826 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:36:02,828 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.5617
+2026-03-17 15:36:02,830 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8568
+2026-03-17 15:36:02,831 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.0883
+2026-03-17 15:36:02,833 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.5660
+2026-03-17 15:36:02,835 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.5714
+2026-03-17 15:36:03,504 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0020.npz
+2026-03-17 15:36:03,505 - Server_DefaultID - INFO - New best personalized accuracy: 41.49%
+2026-03-17 15:36:03,506 - Server_DefaultID - INFO - --- Global Round 21/200 ---
+2026-03-17 15:36:14,220 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2134 ms
+2026-03-17 15:36:14,220 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:36:14,225 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:36:14,226 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.28, Mean=1.18
+2026-03-17 15:36:14,227 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:36:14,228 - Server_DefaultID - INFO - --- Global Round 22/200 ---
+2026-03-17 15:36:25,271 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2088 ms
+2026-03-17 15:36:25,271 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:36:25,276 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:36:25,277 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.34, Mean=1.18
+2026-03-17 15:36:25,279 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:36:25,280 - Server_DefaultID - INFO - --- Global Round 23/200 ---
+2026-03-17 15:36:40,395 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2253 ms
+2026-03-17 15:36:40,395 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:36:40,404 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:36:40,405 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.29, Mean=1.19
+2026-03-17 15:36:40,406 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:36:40,407 - Server_DefaultID - INFO - --- Global Round 24/200 ---
+2026-03-17 15:36:51,685 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2227 ms
+2026-03-17 15:36:51,685 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:36:51,690 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:36:51,691 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.39, Mean=1.17
+2026-03-17 15:36:51,693 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:36:51,693 - Server_DefaultID - INFO - --- Global Round 25/200 ---
+2026-03-17 15:37:06,426 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2163 ms
+2026-03-17 15:37:06,426 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:37:06,433 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:37:06,434 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.41, Mean=1.18
+2026-03-17 15:37:06,436 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:37:06,437 - Server_DefaultID - INFO - --- Evaluating models at round 25 with Advanced Uncertainty Metrics ---
+2026-03-17 15:38:45,207 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 45.63%, Std: 35.10, Min: 0.00, Max: 100.00
+2026-03-17 15:38:45,207 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0846, Std: 0.0073
+2026-03-17 15:38:45,207 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.3692, Std: 0.2644
+2026-03-17 15:38:45,207 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.0970, Std: 0.1965
+2026-03-17 15:38:45,207 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:38:45,210 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.5809
+2026-03-17 15:38:45,212 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8669
+2026-03-17 15:38:45,213 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.0925
+2026-03-17 15:38:45,215 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.5860
+2026-03-17 15:38:45,217 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.5913
+2026-03-17 15:38:45,424 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0025.npz
+2026-03-17 15:38:45,425 - Server_DefaultID - INFO - New best personalized accuracy: 45.63%
+2026-03-17 15:38:45,426 - Server_DefaultID - INFO - --- Global Round 26/200 ---
+2026-03-17 15:38:50,456 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2023 ms
+2026-03-17 15:38:50,456 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:38:50,459 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:38:50,460 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.10, Max=1.22, Mean=1.15
+2026-03-17 15:38:50,462 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:38:50,462 - Server_DefaultID - INFO - --- Global Round 27/200 ---
+2026-03-17 15:38:58,928 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1886 ms
+2026-03-17 15:38:58,928 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:38:58,944 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:38:58,945 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.32, Mean=1.19
+2026-03-17 15:38:58,948 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:38:58,949 - Server_DefaultID - INFO - --- Global Round 28/200 ---
+2026-03-17 15:39:09,014 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1943 ms
+2026-03-17 15:39:09,014 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:39:09,021 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:39:09,022 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.37, Mean=1.18
+2026-03-17 15:39:09,025 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:39:09,025 - Server_DefaultID - INFO - --- Global Round 29/200 ---
+2026-03-17 15:39:18,824 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1937 ms
+2026-03-17 15:39:18,824 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:39:18,833 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:39:18,834 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.55, Mean=1.19
+2026-03-17 15:39:18,836 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:39:18,837 - Server_DefaultID - INFO - --- Global Round 30/200 ---
+2026-03-17 15:39:29,731 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1990 ms
+2026-03-17 15:39:29,731 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:39:29,746 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:39:29,746 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.33, Mean=1.19
+2026-03-17 15:39:29,748 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:39:29,749 - Server_DefaultID - INFO - --- Evaluating models at round 30 with Advanced Uncertainty Metrics ---
+2026-03-17 15:41:10,535 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 48.50%, Std: 34.38, Min: 0.00, Max: 100.00
+2026-03-17 15:41:10,535 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0832, Std: 0.0083
+2026-03-17 15:41:10,535 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.3845, Std: 0.2545
+2026-03-17 15:41:10,535 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.1241, Std: 0.1876
+2026-03-17 15:41:10,535 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:41:10,537 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.5933
+2026-03-17 15:41:10,539 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8336
+2026-03-17 15:41:10,540 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.0945
+2026-03-17 15:41:10,542 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.5994
+2026-03-17 15:41:10,543 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.6012
+2026-03-17 15:41:10,772 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0030.npz
+2026-03-17 15:41:10,774 - Server_DefaultID - INFO - New best personalized accuracy: 48.50%
+2026-03-17 15:41:10,774 - Server_DefaultID - INFO - --- Global Round 31/200 ---
+2026-03-17 15:41:26,686 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2161 ms
+2026-03-17 15:41:26,686 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:41:26,698 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:41:26,699 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.15, Max=1.25, Mean=1.18
+2026-03-17 15:41:26,701 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:41:26,702 - Server_DefaultID - INFO - --- Global Round 32/200 ---
+2026-03-17 15:41:36,026 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2154 ms
+2026-03-17 15:41:36,026 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:41:36,063 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:41:36,064 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.16, Max=1.22, Mean=1.19
+2026-03-17 15:41:36,066 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:41:36,067 - Server_DefaultID - INFO - --- Global Round 33/200 ---
+2026-03-17 15:41:51,730 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2254 ms
+2026-03-17 15:41:51,730 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:41:51,744 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:41:51,745 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.29, Mean=1.17
+2026-03-17 15:41:51,747 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:41:51,748 - Server_DefaultID - INFO - --- Global Round 34/200 ---
+2026-03-17 15:42:04,755 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2239 ms
+2026-03-17 15:42:04,755 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:42:04,760 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:42:04,761 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.28, Mean=1.17
+2026-03-17 15:42:04,762 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:42:04,763 - Server_DefaultID - INFO - --- Global Round 35/200 ---
+2026-03-17 15:42:12,400 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2174 ms
+2026-03-17 15:42:12,400 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:42:12,442 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:42:12,443 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.29, Mean=1.17
+2026-03-17 15:42:12,445 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:42:12,446 - Server_DefaultID - INFO - --- Evaluating models at round 35 with Advanced Uncertainty Metrics ---
+2026-03-17 15:43:49,442 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 55.15%, Std: 31.99, Min: 0.00, Max: 100.00
+2026-03-17 15:43:49,442 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0818, Std: 0.0085
+2026-03-17 15:43:49,442 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.4245, Std: 0.2477
+2026-03-17 15:43:49,442 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.1405, Std: 0.1992
+2026-03-17 15:43:49,442 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:43:49,444 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.6172
+2026-03-17 15:43:49,446 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8316
+2026-03-17 15:43:49,447 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.0989
+2026-03-17 15:43:49,449 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.6266
+2026-03-17 15:43:49,451 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.6327
+2026-03-17 15:43:49,648 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0035.npz
+2026-03-17 15:43:49,649 - Server_DefaultID - INFO - New best personalized accuracy: 55.15%
+2026-03-17 15:43:49,650 - Server_DefaultID - INFO - --- Global Round 36/200 ---
+2026-03-17 15:44:09,958 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1924 ms
+2026-03-17 15:44:09,958 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:44:10,013 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:44:10,014 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.22, Mean=1.17
+2026-03-17 15:44:10,018 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:44:10,020 - Server_DefaultID - INFO - --- Global Round 37/200 ---
+2026-03-17 15:44:15,209 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1917 ms
+2026-03-17 15:44:15,210 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:44:15,214 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:44:15,216 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.33, Mean=1.18
+2026-03-17 15:44:15,218 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:44:15,219 - Server_DefaultID - INFO - --- Global Round 38/200 ---
+2026-03-17 15:44:26,293 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 68.3793 ms
+2026-03-17 15:44:26,293 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:44:26,298 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:44:26,298 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.27, Mean=1.15
+2026-03-17 15:44:26,300 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:44:26,301 - Server_DefaultID - INFO - --- Global Round 39/200 ---
+2026-03-17 15:44:34,681 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1942 ms
+2026-03-17 15:44:34,681 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:44:34,694 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:44:34,695 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.32, Mean=1.18
+2026-03-17 15:44:34,697 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:44:34,698 - Server_DefaultID - INFO - --- Global Round 40/200 ---
+2026-03-17 15:45:15,153 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.1966 ms
+2026-03-17 15:45:15,153 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:45:15,229 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:45:15,230 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.29, Mean=1.19
+2026-03-17 15:45:15,231 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:45:15,233 - Server_DefaultID - INFO - --- Evaluating models at round 40 with Advanced Uncertainty Metrics ---
+2026-03-17 15:46:57,805 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 57.31%, Std: 31.00, Min: 0.00, Max: 100.00
+2026-03-17 15:46:57,805 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0811, Std: 0.0092
+2026-03-17 15:46:57,805 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.4353, Std: 0.2431
+2026-03-17 15:46:57,805 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.1367, Std: 0.1926
+2026-03-17 15:46:57,805 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:46:57,808 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.6298
+2026-03-17 15:46:57,809 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.7987
+2026-03-17 15:46:57,810 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.1082
+2026-03-17 15:46:57,812 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.6392
+2026-03-17 15:46:57,814 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.6436
+2026-03-17 15:46:58,040 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0040.npz
+2026-03-17 15:46:58,042 - Server_DefaultID - INFO - New best personalized accuracy: 57.31%
+2026-03-17 15:46:58,043 - Server_DefaultID - INFO - --- Global Round 41/200 ---
+2026-03-17 15:47:09,141 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2154 ms
+2026-03-17 15:47:09,141 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:47:09,149 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:47:09,149 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.29, Mean=1.18
+2026-03-17 15:47:09,151 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:47:09,152 - Server_DefaultID - INFO - --- Global Round 42/200 ---
+2026-03-17 15:47:19,600 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2349 ms
+2026-03-17 15:47:19,600 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:47:19,610 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:47:19,611 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.38, Mean=1.19
+2026-03-17 15:47:19,613 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:47:19,614 - Server_DefaultID - INFO - --- Global Round 43/200 ---
+2026-03-17 15:47:32,069 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2052 ms
+2026-03-17 15:47:32,069 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:47:32,088 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:47:32,089 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.41, Mean=1.18
+2026-03-17 15:47:32,091 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:47:32,092 - Server_DefaultID - INFO - --- Global Round 44/200 ---
+2026-03-17 15:47:40,903 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2116 ms
+2026-03-17 15:47:40,903 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:47:40,907 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:47:40,908 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.32, Mean=1.18
+2026-03-17 15:47:40,911 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:47:40,911 - Server_DefaultID - INFO - --- Global Round 45/200 ---
+2026-03-17 15:47:46,956 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2254 ms
+2026-03-17 15:47:46,956 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:47:46,970 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:47:46,971 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.31, Mean=1.19
+2026-03-17 15:47:46,973 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:47:46,974 - Server_DefaultID - INFO - --- Evaluating models at round 45 with Advanced Uncertainty Metrics ---
+2026-03-17 15:49:27,701 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 56.97%, Std: 31.69, Min: 0.00, Max: 100.00
+2026-03-17 15:49:27,701 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0803, Std: 0.0097
+2026-03-17 15:49:27,701 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.4295, Std: 0.2432
+2026-03-17 15:49:27,701 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.1435, Std: 0.2024
+2026-03-17 15:49:27,701 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:49:27,704 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.6133
+2026-03-17 15:49:27,705 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8273
+2026-03-17 15:49:27,706 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.1044
+2026-03-17 15:49:27,708 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.6280
+2026-03-17 15:49:27,710 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.6329
+2026-03-17 15:49:27,939 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0045.npz
+2026-03-17 15:49:27,941 - Server_DefaultID - INFO - --- Global Round 46/200 ---
+2026-03-17 15:49:37,253 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2202 ms
+2026-03-17 15:49:37,254 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:49:37,258 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:49:37,258 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.10, Max=1.58, Mean=1.19
+2026-03-17 15:49:37,260 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:49:37,261 - Server_DefaultID - INFO - --- Global Round 47/200 ---
+2026-03-17 15:49:59,872 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2076 ms
+2026-03-17 15:49:59,872 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:49:59,893 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:49:59,893 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.10, Max=1.30, Mean=1.15
+2026-03-17 15:49:59,895 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:49:59,897 - Server_DefaultID - INFO - --- Global Round 48/200 ---
+2026-03-17 15:50:05,530 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2103 ms
+2026-03-17 15:50:05,530 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:50:05,585 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:50:05,585 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.28, Mean=1.18
+2026-03-17 15:50:05,587 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:50:05,588 - Server_DefaultID - INFO - --- Global Round 49/200 ---
+2026-03-17 15:50:21,374 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2076 ms
+2026-03-17 15:50:21,374 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:50:21,381 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:50:21,382 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.34, Mean=1.18
+2026-03-17 15:50:21,384 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:50:21,385 - Server_DefaultID - INFO - --- Global Round 50/200 ---
+2026-03-17 15:50:33,516 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2113 ms
+2026-03-17 15:50:33,517 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:50:33,522 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:50:33,522 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.30, Mean=1.18
+2026-03-17 15:50:33,524 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:50:33,525 - Server_DefaultID - INFO - --- Evaluating models at round 50 with Advanced Uncertainty Metrics ---
+2026-03-17 15:52:17,328 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 58.65%, Std: 30.36, Min: 0.00, Max: 100.00
+2026-03-17 15:52:17,328 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0795, Std: 0.0100
+2026-03-17 15:52:17,328 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.4343, Std: 0.2378
+2026-03-17 15:52:17,328 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.1563, Std: 0.2104
+2026-03-17 15:52:17,328 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:52:17,330 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.6030
+2026-03-17 15:52:17,332 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8054
+2026-03-17 15:52:17,333 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.1000
+2026-03-17 15:52:17,335 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.6235
+2026-03-17 15:52:17,337 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.6291
+2026-03-17 15:52:18,213 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0050.npz
+2026-03-17 15:52:18,214 - Server_DefaultID - INFO - New best personalized accuracy: 58.65%
+2026-03-17 15:52:18,215 - Server_DefaultID - INFO - --- Global Round 51/200 ---
+2026-03-17 15:52:24,554 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2177 ms
+2026-03-17 15:52:24,555 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:52:24,558 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:52:24,559 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.14, Max=1.31, Mean=1.19
+2026-03-17 15:52:24,561 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:52:24,562 - Server_DefaultID - INFO - --- Global Round 52/200 ---
+2026-03-17 15:52:39,067 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2323 ms
+2026-03-17 15:52:39,067 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:52:39,072 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:52:39,073 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.26, Mean=1.18
+2026-03-17 15:52:39,076 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:52:39,077 - Server_DefaultID - INFO - --- Global Round 53/200 ---
+2026-03-17 15:52:51,252 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2181 ms
+2026-03-17 15:52:51,252 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:52:51,294 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:52:51,295 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.36, Mean=1.18
+2026-03-17 15:52:51,297 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:52:51,298 - Server_DefaultID - INFO - --- Global Round 54/200 ---
+2026-03-17 15:53:01,228 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2113 ms
+2026-03-17 15:53:01,228 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:53:01,241 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:53:01,242 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.39, Mean=1.17
+2026-03-17 15:53:01,244 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:53:01,245 - Server_DefaultID - INFO - --- Global Round 55/200 ---
+2026-03-17 15:53:13,292 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2255 ms
+2026-03-17 15:53:13,292 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:53:13,308 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:53:13,309 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.31, Mean=1.15
+2026-03-17 15:53:13,311 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:53:13,312 - Server_DefaultID - INFO - --- Evaluating models at round 55 with Advanced Uncertainty Metrics ---
+2026-03-17 15:54:54,779 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 60.48%, Std: 28.79, Min: 0.00, Max: 100.00
+2026-03-17 15:54:54,779 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0788, Std: 0.0103
+2026-03-17 15:54:54,779 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.4439, Std: 0.2268
+2026-03-17 15:54:54,779 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.1649, Std: 0.2116
+2026-03-17 15:54:54,779 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:54:54,782 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.6233
+2026-03-17 15:54:54,783 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8142
+2026-03-17 15:54:54,785 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.1103
+2026-03-17 15:54:54,787 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.6421
+2026-03-17 15:54:54,790 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.6450
+2026-03-17 15:54:55,033 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0055.npz
+2026-03-17 15:54:55,035 - Server_DefaultID - INFO - New best personalized accuracy: 60.48%
+2026-03-17 15:54:55,035 - Server_DefaultID - INFO - --- Global Round 56/200 ---
+2026-03-17 15:55:08,313 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2074 ms
+2026-03-17 15:55:08,313 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:55:08,325 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:55:08,325 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.12, Max=1.38, Mean=1.19
+2026-03-17 15:55:08,327 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:55:08,328 - Server_DefaultID - INFO - --- Global Round 57/200 ---
+2026-03-17 15:55:21,248 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2132 ms
+2026-03-17 15:55:21,249 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:55:21,266 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:55:21,267 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.24, Mean=1.17
+2026-03-17 15:55:21,269 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:55:21,271 - Server_DefaultID - INFO - --- Global Round 58/200 ---
+2026-03-17 15:55:35,920 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2064 ms
+2026-03-17 15:55:35,921 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:55:35,929 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:55:35,929 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.13, Max=1.28, Mean=1.19
+2026-03-17 15:55:35,932 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:55:35,934 - Server_DefaultID - INFO - --- Global Round 59/200 ---
+2026-03-17 15:55:48,627 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2283 ms
+2026-03-17 15:55:48,628 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:55:48,637 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:55:48,638 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.21, Mean=1.16
+2026-03-17 15:55:48,640 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:55:48,641 - Server_DefaultID - INFO - --- Global Round 60/200 ---
+2026-03-17 15:56:49,834 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2178 ms
+2026-03-17 15:56:49,834 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:56:50,060 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:56:50,061 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.10, Max=1.20, Mean=1.15
+2026-03-17 15:56:50,065 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:56:50,067 - Server_DefaultID - INFO - --- Evaluating models at round 60 with Advanced Uncertainty Metrics ---
+2026-03-17 15:58:33,866 - Server_DefaultID - INFO - [Metric 1] Personalized Accuracy | Mean: 60.94%, Std: 28.81, Min: 0.00, Max: 100.00
+2026-03-17 15:58:33,866 - Server_DefaultID - INFO - [Metric 1] Personalized Brier Score | Mean: 0.0782, Std: 0.0107
+2026-03-17 15:58:33,866 - Server_DefaultID - INFO - [Metric 1] Personalized ECE | Mean: 0.4440, Std: 0.2258
+2026-03-17 15:58:33,866 - Server_DefaultID - INFO - [Metric 2] Epistemic Fidelity (Spearman Corr) | Mean: 0.1680, Std: 0.2098
+2026-03-17 15:58:33,866 - Server_DefaultID - INFO - [Metric 3] Aleatoric Consistency (U) | Mean: nan, Std: nan
+2026-03-17 15:58:33,869 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Epistemic): 0.6293
+2026-03-17 15:58:33,870 - Server_DefaultID - INFO - [Metric 4] OOD FPR@95%TPR: 0.8027
+2026-03-17 15:58:33,872 - Server_DefaultID - INFO - [Metric 5] OOD AUC-PR: 0.1032
+2026-03-17 15:58:33,874 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Energy): 0.6494
+2026-03-17 15:58:33,876 - Server_DefaultID - INFO - [OOD Eval] OOD AUC-ROC (Total): 0.6518
+2026-03-17 15:58:34,136 - Server_DefaultID - INFO - [Mechanism Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/mechanism/round_0060.npz
+2026-03-17 15:58:34,139 - Server_DefaultID - INFO - New best personalized accuracy: 60.94%
+2026-03-17 15:58:34,139 - Server_DefaultID - INFO - --- Global Round 61/200 ---
+2026-03-17 15:58:45,356 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2103 ms
+2026-03-17 15:58:45,356 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:58:45,360 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:58:45,360 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.21, Mean=1.18
+2026-03-17 15:58:45,363 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:58:45,364 - Server_DefaultID - INFO - --- Global Round 62/200 ---
+2026-03-17 15:58:52,320 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2106 ms
+2026-03-17 15:58:52,320 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:58:52,409 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:58:52,410 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.11, Max=1.33, Mean=1.18
+2026-03-17 15:58:52,412 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:58:52,413 - Server_DefaultID - INFO - --- Global Round 63/200 ---
+2026-03-17 15:59:07,386 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2251 ms
+2026-03-17 15:59:07,386 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:59:07,393 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:59:07,394 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.10, Max=1.21, Mean=1.14
+2026-03-17 15:59:07,397 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:59:07,397 - Server_DefaultID - INFO - --- Global Round 64/200 ---
+2026-03-17 15:59:26,198 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2118 ms
+2026-03-17 15:59:26,198 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:59:26,211 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:59:26,212 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.10, Max=1.26, Mean=1.17
+2026-03-17 15:59:26,215 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:59:26,216 - Server_DefaultID - INFO - --- Global Round 65/200 ---
+2026-03-17 15:59:39,171 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.2028 ms
+2026-03-17 15:59:39,171 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-17 15:59:39,187 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-17 15:59:39,188 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.10, Max=1.23, Mean=1.18
+2026-03-17 15:59:39,190 - Server_DefaultID - INFO - [Byzantine Log] saved results/cifar10_FedSPADE_0.5_ablation6_wofsa_gc_200r/byzantine/records.npz
+2026-03-17 15:59:39,191 - Server_DefaultID - INFO - --- Evaluating models at round 65 with Advanced Uncertainty Metrics ---

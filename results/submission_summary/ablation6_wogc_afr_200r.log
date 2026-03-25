@@ -1,0 +1,12 @@
+2026-03-18 20:50:20,738 - Server_DefaultID - INFO - Starting FedSPADE Training Process
+2026-03-18 20:50:20,738 - Server_DefaultID - INFO - --- Global Round 1/200 ---
+2026-03-18 20:52:03,473 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.4821 ms
+2026-03-18 20:52:03,473 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-18 20:52:10,942 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-18 20:52:10,943 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.16, Max=1.21, Mean=1.19
+2026-03-18 20:52:10,944 - Server_DefaultID - INFO - --- Global Round 2/200 ---
+2026-03-18 20:53:44,072 - Server_DefaultID - INFO - [Overhead Analysis] Avg. KL-Div computation time per batch: 0.3982 ms
+2026-03-18 20:53:44,072 - Server_DefaultID - INFO - [Overhead Analysis] Communication overhead per client for alpha_report: 40 bytes
+2026-03-18 20:53:49,144 - Server_DefaultID - INFO - Using Byzantine-robust prior aggregation
+2026-03-18 20:53:49,145 - Server_DefaultID - INFO - Byzantine-robust aggregation (coord_median): Min=1.15, Max=1.23, Mean=1.19
+2026-03-18 20:53:49,146 - Server_DefaultID - INFO - --- Global Round 3/200 ---

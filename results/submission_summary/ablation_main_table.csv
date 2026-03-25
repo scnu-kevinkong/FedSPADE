@@ -1,0 +1,8 @@
+Variant,GPR,OOD,AUG,source_run,round,Acc,ECE,Brier,AUROC,FPR@95TPR,MeanProjLambdaMin+,ClientCondNum,MeanProjEigspec
+GPR only,Y,N,N,results/submission_summary/ablation7_gpr_only_200r.log,,,,,,,,,
+OOD only,N,Y,N,results/submission_summary/ablation7_ood_only_200r.log,,,,,,,,,
+AUG only,N,N,Y,results/submission_summary/ablation7_aug_only_200r.log,,,,,,,,,
+GPR + OOD,Y,Y,N,results/submission_summary/ablation7_gpr_ood_200r.log,,,,,,,,,
+GPR + AUG,Y,N,Y,results/submission_summary/ablation7_gpr_aug_200r.log,,,,,,,,,
+OOD + AUG,N,Y,Y,results/submission_summary/ablation7_ood_aug_200r.log,,,,,,,,,
+FedUg Full,Y,Y,Y,results/submission_summary/ablation7_fedug_full_200r.log,,,,,,,,,
