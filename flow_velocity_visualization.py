@@ -309,7 +309,7 @@ def visualize_flow_trajectory(flow_model, device, param_dim, n_visualization_ste
 # --- Main execution block ---
 if __name__ == '__main__':
     # Ensure this path points to your actual model file
-    model_path = '/home/xiongzc/Desktop/pFedFDA-main/eval_model/fedavg_cifar10_dir01_CNN_global_flow_weights_round120.pth'
+    model_path = '/home/xiongzc/Desktop/pFedFDA-main/eval_model/fedavg_cifar10_dir01_CNN_global_flow_weights_round200.pth'
     # model_path = 'dummy_model_weights/dummy_flow_model.pth' # For testing without a real model
 
     if not os.path.exists(model_path):
@@ -352,12 +352,12 @@ if __name__ == '__main__':
                 n_samples=50, # Keep n_samples relatively low for clarity with small arrows
                 generation_num_steps=100,
                 clamp_val_generate=20.0,
-                save_path='flow_model_trajectory_neurips_small_arrows.png',
+                save_path='flow_model_trajectory_neurips_small_arrows.pdf',
                 arrow_scale=400.0,  # << INCREASED (larger scale = shorter arrows)
                 arrow_headwidth=3.0, # << DECREASED
                 arrow_headlength=4.5, # << DECREASED
                 arrow_shaftwidth_factor=0.0018, # << DECREASED (adjust for thinner shafts)
-                dpi=300
+                dpi=800
             )
     except FileNotFoundError:
         print(f"Error: Model file not found at {model_path}. Please check the path.")

@@ -228,7 +228,7 @@ if __name__ == '__main__':
             n_samples=200,
             generation_num_steps=100,
             clamp_val_generate=20.0,
-            save_path='flow_model_trajectory_2x4.png' # New save path
+            save_path='flow_model_trajectory_2x4_round20.pdf' # New save path
         )
     except Exception as e:
         print(f"An error occurred: {e}")

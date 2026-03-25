@@ -1,0 +1,25 @@
+\Loading existing results for FedAvg-EDL seed 0
+Loading existing results for FedProx-EDL seed 0
+Loading existing results for FedNova-EDL seed 0
+Loading existing results for FedSPADE seed 0
+FedSPADE does not show a clear final-round advantage in λ_min^+ (FedSPADE 1.2523e-03, FedProx-EDL 2.7220e-03, FedNova-EDL 2.4542e-03); additional rounds or stronger mechanism weights may be needed to confirm geometry repair.
+Saved CSV logs to: /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/cifar10_dir01/curvature_rounds_all.csv and /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/cifar10_dir01/curvature_eigs_all.csv
+Saved figures to: /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/cifar10_dir01/mechanism_curvature_3panel.png and /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/cifar10_dir01/mechanism_curvature_3panel.pdf
+Loading existing results for FedAvg-EDL seed 0
+Loading existing results for FedProx-EDL seed 0
+Loading existing results for FedNova-EDL seed 0
+Loading existing results for FedSPADE seed 0
+Loading existing results for FedAvg-EDL seed 1
+Loading existing results for FedProx-EDL seed 1
+Loading existing results for FedNova-EDL seed 1
+Loading existing results for FedSPADE seed 1
+Loading existing results for FedAvg-EDL seed 2
+Loading existing results for FedProx-EDL seed 2
+Loading existing results for FedNova-EDL seed 2
+Loading existing results for FedSPADE seed 2
+FedSPADE achieves the largest positive unseen-subspace curvature at the final round (mean λ_min^+=4.5090e-03), while FedProx-EDL (2.0689e-03) and FedNova-EDL (1.9962e-03) appear to stabilize optimization without fully restoring unseen evidential geometry.
+Saved CSV logs to: /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/cifar10_dir05/curvature_rounds_all.csv and /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/cifar10_dir05/curvature_eigs_all.csv
+Saved figures to: /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/cifar10_dir05/mechanism_curvature_3panel.png and /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/cifar10_dir05/mechanism_curvature_3panel.pdf
+当前设置下 FedSPADE 的正曲率优势不显著（FedSPADE=1.2523e-03, FedProx-EDL=2.7220e-03, FedNova-EDL=2.4542e-03），建议增加轮数或机制权重后复核。
+Top figure PNG: /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/top_conf_mechanism_figure.png
+Top figure PDF: /home/gyxc_linux/fedcure_local/pFedFDA-main/results/mechanism_suite/top_conf_mechanism_figure.pdf

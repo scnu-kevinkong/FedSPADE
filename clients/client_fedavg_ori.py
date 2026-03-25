@@ -3,7 +3,7 @@ import torch
 from clients.client_base import Client
 
 class ClientFedAvg(Client):
-    def __init__(self, args, client_idx, is_corrupted):
+    def __init__(self, args, client_idx, is_corrupted=False):
         super().__init__(args, client_idx, is_corrupted)        
         
     def train(self):

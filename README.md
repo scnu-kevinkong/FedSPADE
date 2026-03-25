@@ -1,7 +1,7 @@
 # FedSPADE
 Call the Bluff: Provable Restoration of Evidential Identifiability in Non-IID Federated Learning
 
-PyTorch implementation of pFedFDA: Personalized Federated Learning via Feature Distribution Adaptation (NeurIPS 2024). 
+PyTorch implementation of FedSPADE
 
 ## Data Setup
 
